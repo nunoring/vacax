@@ -14,6 +14,10 @@
 
 \- ✅ VoiceFit 운영 문서 5개 작성 (STATE/NEXT/DECISIONS/LOG/code\_path)
 
+\- ✅ 이미지 정책 확정: 쿠팡 파트너스 A안 (D-006 해소)
+
+\- ✅ D단 마커 치환 버그 수정: markdown.ts regex 강화 + generate/route.ts IMAGES 섹션 형식 개선
+
 \- 📌 다음: 이미지 정책 결정 → 버그 수정
 
 
