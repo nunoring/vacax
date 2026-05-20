@@ -20,6 +20,17 @@ vacax/
 
 ---
 
+## Knowledge Base
+
+세션 시작 시 관련 knowledge 파일 읽어서 같은 실수 반복 방지:
+- `knowledge/ai-api-lessons.md` — AI API 선택 기준 + 함정
+- `knowledge/flutter-lessons.md` — Flutter 개발 패턴
+- `knowledge/product-insights.md` — 제품 기획 인사이트
+
+새 교훈 생기면 세션 종료 시 해당 파일에 추가.
+
+---
+
 ## 세션 시작 자동 행동
 
 사용자가 "시작", "start", "[프로젝트명] 시작" 같은 명령어를 입력하면 다음을 자동 실행:
