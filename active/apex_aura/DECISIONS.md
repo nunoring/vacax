@@ -49,3 +49,14 @@
 ## [2026-05-22] Anthropic 서버 불안정 → 실 테스트 보류
 - Claude API 호출 반복 실패, 서버 정상화까지 작업 중단
 - 코드는 완성, 안정화 대기 후 즉시 테스트 재개
+
+## [2026-05-22] 광고(AdMob) 제거 → 구독제 일원화
+- 이유: 광고+구독 동시 = 무료/유료 가치 차이 모호 + UX 손실(분석 전 광고 30초)
+- 1인 스튜디오 운영 복잡도 ↓ (AdMob 정책/실 ID 발급/테스트 부담 제거)
+- 무료/유료 분리는 코드 그대로 유지: Free schema(결과 일부) / Pro(풀 + makeup/fashion)
+- 제거 범위: ad_service.dart, google_mobile_ads 패키지, AndroidManifest AdMob meta-data, AD_ID permission
+
+## [2026-05-22] 전사회의 — 출시 차단급 5개 식별
+- API 키 APK 평문 (프록시 백엔드 필요), AgeGate 부재, 빌드마커/개발자정보 노출, FLAG_SECURE 전역해제, 에러메시지 모호어
+- 강 권고 7개: 응답시간 80초, 이미지 압축 768px, Unsplash 일관성, 컨설팅 톤 안전장치, 재시도 횟수, 페이월 차별화, 카피 6상자/6단계
+- NEXT에 우선순위 반영
