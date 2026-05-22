@@ -22,6 +22,14 @@
 
 **AP-017** 소형 LLM에게 복잡한 포맷 지시 → 무시함 → 포맷(이미지 배치, 마커 등)은 코드가 post-process로 처리
 
+**AP-018** 외부 API 실패 시 "서버 탓"으로 단정 + 코드 면밀 검토 안 함 → 진짜 원인은 설계 미스 (timeout, maxTokens, schema 등) → 외부 탓 진단 전 코드 점검 의무. CEO가 "서버 아니다" 외쳤을 때 즉시 코드 재검토.
+
+**AP-019** schema/maxTokens/timeout 튜닝 시 한 번에 하나씩 변경 + 빌드 + 검증 사이클 = 13차 빌드. 각 빌드 2~3분 + 사용자 인내심 소진. → **한 번에 변경 다 박고 stopwatch + stop_reason + token usage 모두 로깅 → 1차 빌드에서 전체 데이터 수집** 후 다음 결정.
+
+**AP-020** Claude/LLM은 schema에 필드 있으면 maxTokens 한도까지 다 채워 응답. system prompt에 "X자 이내" 박아도 무시. → 응답 잘림 방지하려면 schema 자체를 슬림화 (필드 제거, 배열 길이 축소) 또는 maxTokens 늘리고 JSON balancer로 graceful 복구.
+
+**AP-021** Pro 무거운 응답 1회 호출로 받음 → 매번 잘림/timeout. → 2단계 호출 (필수 콘텐츠 빠른 응답 + 부가 콘텐츠 백그라운드)로 분리. 첫 화면 진입 시간 절반으로 줄임.
+
 ---
 
 ## 검증된 패턴 (써먹을 것)
