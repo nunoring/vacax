@@ -24,3 +24,28 @@
 ## [2026-05-07] Firebase Functions 백엔드 유지
 - Claude Sonnet Vision으로 분석 (GPT-4o 아님)
 - ML Kit(오프라인 수치) + Claude(해석) 조합 유지
+
+## [2026-05-22] 메인 AI를 Gemini → Claude Haiku 4.5로 영구 전환
+- 이유: Gemini 일일 쿼터 제한 + content filter 보수성 + 외모 분석 디테일 부족
+- Claude Haiku 4.5: content filter 약함 + 컨설팅 톤(직설/단점 명시) 우수
+- Anthropic REST API 직접 호출 (lib/services/claude_service.dart), 서버 없음
+- Gemini는 fallback/병행 옵션으로만 유지
+
+## [2026-05-22] 앱 이름 변경: Apex Aura → 닮은꼴 찾기
+- 이유: 한국 시장 타깃 — 영문 추상 네이밍보다 직관적 한국어 네이밍이 검색·공유 강함
+- 부제: "AI 외모 컨설턴트 · 24시간 무제한"
+- Android label / main.dart title / home 헤더 동시 교체
+
+## [2026-05-22] 동물상 선택 UI 제거
+- 이유: 사용자 선택이 결과에 큰 영향 없음 + 입력 단계 줄여 전환율↑
+- ML Kit가 현재 동물상 자동 판정 + AI가 변신 방향(target_animal) 자유 추천
+- 사용자 입력: 사진 + 성별 2가지만
+
+## [2026-05-22] 컨설팅 페르소나 강화 (30만원 컨설턴트 톤)
+- 이유: AI 티 제거 + 위로형 무난한 표현이 변별력 없음
+- 직설적 + 단점 명시 + 비의료 솔루션 묶음 (헤어/메이크업/패션/그루밍)
+- 의료 권유 금지 (병원/클리닉/주사/주입 banned word)
+
+## [2026-05-22] Anthropic 서버 불안정 → 실 테스트 보류
+- Claude API 호출 반복 실패, 서버 정상화까지 작업 중단
+- 코드는 완성, 안정화 대기 후 즉시 테스트 재개

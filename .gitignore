@@ -1,0 +1,11 @@
+# 임시 PDF 추출/OCR 작업물
+tmp_*.py
+tmp_pdf_*/
+tmp_*.txt
+
+# Claude 로컬 설정
+.claude/settings.local.json
+
+# OS
+.DS_Store
+Thumbs.db
