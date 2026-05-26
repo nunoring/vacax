@@ -9,3 +9,7 @@ tmp_*.txt
 # OS
 .DS_Store
 Thumbs.db
+
+# 민감 개인정보 — 주식 단타 시스템 (시드/매매/손실 이력)
+active/stocks/
+knowledge/trading-lessons.md

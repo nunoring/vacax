@@ -25,7 +25,16 @@
       "PowerShell($utf8NoBom = New-Object System.Text.UTF8Encoding $false; $key = [System.IO.File]::ReadAllText\\(\"C:\\\\Users\\\\vacma\\\\Desktop\\\\key.txt\", $utf8NoBom\\).Trim\\(\\); Write-Output \"KEY_LENGTH:$\\($key.Length\\)\")",
       "Bash(flutter pub *)",
       "Skill(update-config)",
-      "mcp__claude_ai_Notion__notion-update-page"
+      "mcp__claude_ai_Notion__notion-update-page",
+      "WebFetch(domain:developer.themoviedb.org)",
+      "WebFetch(domain:www.themoviedb.org)",
+      "WebFetch(domain:api.wikimedia.org)",
+      "WebFetch(domain:ko.wikipedia.org)",
+      "WebSearch",
+      "mcp__claude_ai_Notion__notion-create-pages",
+      "mcp__claude_ai_Notion__notion-move-pages",
+      "Bash(grep -E --line-buffered \"Running Gradle|Built |Installing |Syncing files|Flutter run key|FAILURE|Error|BUILD FAILED|Exception|\\\\\\\\[ERROR|error:|Lost connection\")",
+      "WebFetch(domain:www.biopharmcatalyst.com)"
     ]
   }
 }
