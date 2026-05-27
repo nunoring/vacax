@@ -6,6 +6,20 @@
 
 
 
+## 2026-05-27 (세션 5 — 쿠팡 상품평 후킹 보강)
+
+- 🚨 발견: 쿠팡 상품평이 후킹 무적용(시스템 프롬프트에 HOOK/경제적자유 누락, ANTI_AI_TONE만) → 밋밋
+
+- ✅ `COUPANG_REVIEW_COPY` 신설 (첫 줄 후킹 + 마무리 + '도움돼요' CTA, 제공자 태도)
+
+- ✅ generate·regenerate 라우트 둘 다 wiring (drift 방지) + tsc 통과
+
+- ✅ Claude 프로젝트 지침 파일 작성 (`coupang_review_claude_project.md`) — API 비용 0 직접 작성용, 앱과 동일 규격 + 공정위 대가성 고지 강제
+
+- 📌 git: 어제 커밋 2개(5576c83·36d097f) 로컬 정상, push는 Vercel 키 세팅 후 보류 유지(ahead)
+
+
+
 ## 2026-05-26 (세션 4 — 품질 대개편 + 쿠팡 상품평)
 
 - ✅ AI 모델 gpt-4.1-nano → Claude Sonnet 4.6 (말투 "외국인 한국어" 해소)
