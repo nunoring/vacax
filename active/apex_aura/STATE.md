@@ -1,14 +1,14 @@
 # Apex Aura — STATE
 
-**진행도:** 95%
-**단계:** Claude 안정화 + 2단계 호출 구조 + 풍부한 결과 콘텐츠. 페이지 4(컨설팅 리포트) 재배치 검증 대기.
-**최종 문서 기준:** 2026-05-23
+**진행도:** 97%
+**단계:** Play 출시자산 전부 준비 완료(AAB·512아이콘·피처그래픽·PRIVACY 공개 URL). 실제 분석 결과 퀄 검증 + 무료 출시 결정 대기.
+**최종 문서 기준:** 2026-05-29
 
-## 활성 Blocker (출시 차단급)
-- 🔴 **API 키 4종 APK 평문 박힘** — Anthropic/Gemini/Unsplash/RevenueCat. 프록시 백엔드 필요 (Cloudflare Workers 권장)
-- 🔴 **AgeGate 없음 + 외모 평가** — Play Store 정책 위반 위험. 미성년 차단 필요
-- 🟡 `kDevMode = true` → RevenueCat 프로덕션 키 받은 후 false로
-- 🟡 RevenueCat 프로덕션 키 미발급 (CEO 직접)
+## 활성 Blocker
+- 🔴 **실제 Claude 분석 결과 미검증** — 서버 불안정으로 실 테스트 계속 보류. 출력 퀄(일반론 여부)이 출시 가치 좌우. **출시 전 1건 테스트가 최우선**
+- 🔴 **API 키 APK 평문** — 프록시 백엔드 필요(출시 후 가능). 임시 방어 = Anthropic 하드캡
+- 🟡 **Anthropic spending 하드캡 미설정** (CEO) — 무료 출시 전 필수, 손실 상한 고정
+- 🟡 `kDevMode=true` — 무료 출시엔 OK(Pro 전체개방). 수익화 시 RevenueCat 키+false
 
 ## 현재 완료된 것
 - Firebase Functions 제거 → Flutter 직접 호출
@@ -32,6 +32,8 @@
 - **패션 룩 2개로 확장** + rationale 자세히 (얼굴형/체형/컬러 시즌 매칭)
 - **메이크업 가이드 이미지 제거** (Unsplash 매칭 부정확)
 - **패션 사진 BoxFit.contain** + height 200 (잘림 방지)
+- **[2026-05-29] AgeGate 복원 + 진입 연결** (_EntryGate: 생년월일 DatePicker+만14세 차단, 로컬 저장) → 출시 블로커 해소
+- **[2026-05-29] release AAB 빌드 성공** (서명O, 업로드 가능) + Play 자산: PRIVACY 공개 URL(github blob), 피처그래픽 1024×500, 512 아이콘, 스크린샷 17장(제출 시 8장 선별), 데이터safety/등급 초안
 
 ## 기술 스택
 Flutter / Dart 3.x · **Claude Haiku 4.5** · ML Kit · RevenueCat · Wikipedia/Unsplash
