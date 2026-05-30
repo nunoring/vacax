@@ -34,7 +34,9 @@
       "mcp__claude_ai_Notion__notion-create-pages",
       "mcp__claude_ai_Notion__notion-move-pages",
       "Bash(grep -E --line-buffered \"Running Gradle|Built |Installing |Syncing files|Flutter run key|FAILURE|Error|BUILD FAILED|Exception|\\\\\\\\[ERROR|error:|Lost connection\")",
-      "WebFetch(domain:www.biopharmcatalyst.com)"
+      "WebFetch(domain:www.biopharmcatalyst.com)",
+      "Skill(claude-api)",
+      "WebFetch(domain:finviz.com)"
     ]
   }
 }
