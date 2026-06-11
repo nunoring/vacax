@@ -36,7 +36,24 @@
       "Bash(grep -E --line-buffered \"Running Gradle|Built |Installing |Syncing files|Flutter run key|FAILURE|Error|BUILD FAILED|Exception|\\\\\\\\[ERROR|error:|Lost connection\")",
       "WebFetch(domain:www.biopharmcatalyst.com)",
       "Skill(claude-api)",
-      "WebFetch(domain:finviz.com)"
+      "WebFetch(domain:finviz.com)",
+      "Skill(deep-research)",
+      "WebFetch(domain:www.all-con.co.kr)",
+      "WebFetch(domain:www.code-c.kr)",
+      "WebFetch(domain:kmong.com)",
+      "WebFetch(domain:designercenter.loud.kr)",
+      "WebFetch(domain:www.assyro.com)",
+      "WebFetch(domain:www.biopharmawatch.com)",
+      "WebFetch(domain:catalystalert.io)",
+      "WebFetch(domain:aimatters.co.kr)",
+      "WebFetch(domain:www.mobiinside.co.kr)",
+      "WebFetch(domain:www.globenewswire.com)",
+      "WebFetch(domain:www.marketbeat.com)",
+      "Skill(schedule)",
+      "Skill(watch:watch)",
+      "mcp__d13b0f1b-c65b-4a55-8412-1013f194cfba__notion-search",
+      "mcp__d13b0f1b-c65b-4a55-8412-1013f194cfba__notion-create-pages",
+      "WebFetch(domain:www.loud.kr)"
     ]
   }
 }
