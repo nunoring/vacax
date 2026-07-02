@@ -28,3 +28,4 @@
 2026-07-02 | CEO 정면 사진 + 시스루 댄디컷 실제 생성 1컷 시도. gpt-once로 1회 제한 후 실행했으나 Replicate output 이미지 없음으로 fallback placeholder 반환(`isMock=true`, `costUsd=0`). 즉시 mock 재잠금.
 2026-07-02 | 실제 생성 실패 후 Replicate output 객체/배열 파싱과 실패 status/error 메시지 보강. `node --check`/build 통과, `12b124b` push. mock 재시작 완료.
 2026-07-02 | 홈 화면의 중간/긴 기장 2장 미리보기 제거. 3컷 세트가 아니어서 어색하던 영역을 비용 가드/원본 선택 저장/레퍼런스 권한 확인 패널로 교체. typecheck/build 통과, `2391715` push.
+2026-07-02 | CEO 피드백 반영: 홈의 내부용 안전장치 패널 제거. 빠른 작업을 `기존 고객 검색`, `레퍼런스 바로 적용`으로 교체하고, 레퍼런스 직행 시 모드 선택을 건너뛰어 9개 기본 스타일 선택 화면으로 연결. typecheck/build 통과, `f0771fd` push.
