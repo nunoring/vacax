@@ -17,7 +17,7 @@ Updated: 2026-07-02
 - mock 기준 AI 추천 흐름과 레퍼런스 선택 흐름 모두 저장까지 통과.
 - `npm.cmd run typecheck` 통과.
 - `SMOKE_TEST_CHECKLIST.md` 작성 완료.
-- 코드 폴더는 private Git repo로 초기화/푸시 완료. 현재 브랜치 `codex/design-pass-2`, 최신 커밋 `83e3be6`.
+- 코드 폴더는 private Git repo로 초기화/푸시 완료. 현재 브랜치 `codex/design-pass-2`, 최신 커밋 `af74e1e`.
 - 실제 GPT/Replicate 생성 2회 완료. synthetic 고객 1장 기준 v2 결과가 얼굴 유지 4/5, 헤어 자연스러움 4/5, 상담 사용성 4/5로 1차 통과.
 - CEO 육안 검수: v2 실제 생성 결과는 같은 사람으로 보인다고 판단.
 - 실제 호출 후 proxy는 mock/stub 모드(`realEnabled=false`)로 재잠금.
@@ -39,6 +39,7 @@ Updated: 2026-07-02
 - 사진 등록 단계에 MediaPipe 기반 얼굴 각도 보조 게이트 추가. 정면/약간 틀어짐/재촬영 권장을 표시하고, 심하게 틀어진 사진은 다음 단계 진행을 막음.
 - CEO 제공 3장 각도 테스트 완료. 정면 1장은 `ready`, 틀어진 2장은 `blocked` 판정. 강제 분석 시 추천이 크게 바뀌어 게이트 필요성 확인.
 - `checkPhotoReadiness`에 9초 타임아웃 추가. MediaPipe 로드 지연 시 사진 단계가 무한 `확인 중`에 묶이지 않도록 보정.
+- Claude 기능 개선 위임 지시서 작성 완료: `CLAUDE_FUNCTIONAL_BRIEF_2026-07-02.md`.
 
 ## Blocker
 - 포트폴리오용 그래픽 polish 전. 앱 내부 UI 1차 리프레시는 창백해서 재디자인 필요.
