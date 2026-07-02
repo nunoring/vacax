@@ -1,0 +1,23 @@
+{
+  "oembed": {
+    "title": "캡컷+클로드 AI로 유튜브 시작 | 첫 한 달, 진짜 빠르게 가는 법",
+    "author_name": "AI:ON 에이아이온💡돈버는법💡",
+    "author_url": "https://www.youtube.com/@Channel_AION",
+    "type": "video",
+    "height": 113,
+    "width": 200,
+    "version": "1.0",
+    "provider_name": "YouTube",
+    "provider_url": "https://www.youtube.com/",
+    "thumbnail_height": 360,
+    "thumbnail_width": 480,
+    "thumbnail_url": "https://i.ytimg.com/vi/ivyKstsDsho/hqdefault.jpg",
+    "html": "<iframe width=\"200\" height=\"113\" src=\"https://www.youtube.com/embed/ivyKstsDsho?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen title=\"캡컷+클로드 AI로 유튜브 시작 | 첫 한 달, 진짜 빠르게 가는 법\"></iframe>"
+  },
+  "caption": {
+    "format": "youtube_transcript_api",
+    "language": "Korean (auto-generated)",
+    "language_code": "ko",
+    "is_generated": true
+  }
+}
