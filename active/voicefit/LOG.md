@@ -218,3 +218,5 @@
 
 - 커머스 `not_used/curation` 감사 룰을 우회 체험담 표현까지 확장하고, `/publish` API에서도 감사 fail 발행을 422로 차단. Supabase 도메인은 NXDOMAIN 확인.
 - 대시보드에 로컬 전용 시스템 상태 배너 추가. Supabase DNS 실패, 로컬 fallback 글/말투 개수, mock OFF, 쇼츠 잠금 상태를 앱 안에서 확인 가능.
+## 2026-07-02
+- 5명 폐쇄 테스트 준비: 대시보드 디자인을 작업 흐름 중심으로 개편하고, `SHARE_ACCESS_CODE` 기반 접근 게이트와 localtunnel 임시 공유 경로를 추가했다.
