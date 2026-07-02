@@ -27,3 +27,4 @@
 2026-07-02 | Codex 검수에서 업로드 레퍼런스 출처 unknown 진행 허점 발견 후 차단. typecheck/build/assets/recs 통과, `9b5a1ac`까지 codex/design-pass-2 push 완료.
 2026-07-02 | CEO 정면 사진 + 시스루 댄디컷 실제 생성 1컷 시도. gpt-once로 1회 제한 후 실행했으나 Replicate output 이미지 없음으로 fallback placeholder 반환(`isMock=true`, `costUsd=0`). 즉시 mock 재잠금.
 2026-07-02 | 실제 생성 실패 후 Replicate output 객체/배열 파싱과 실패 status/error 메시지 보강. `node --check`/build 통과, `12b124b` push. mock 재시작 완료.
+2026-07-02 | 홈 화면의 중간/긴 기장 2장 미리보기 제거. 3컷 세트가 아니어서 어색하던 영역을 비용 가드/원본 선택 저장/레퍼런스 권한 확인 패널로 교체. typecheck/build 통과, `2391715` push.
