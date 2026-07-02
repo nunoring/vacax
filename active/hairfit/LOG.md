@@ -1,0 +1,22 @@
+# HairFit MVP LOG
+
+2026-07-01 | Notion의 Claude Design/웹제작 요약 원칙을 화면에 직접 적용. 홈/결과/모드 흐름 개선, build 및 mock 흐름 검증 완료. 다음은 스타일 에셋 6종 교체.
+2026-07-01 | VacAX 점검: 스타일 에셋 9종 중 3종 ready, 6종 ok_small placeholder 성격 확인. 다음 작업을 에셋 교체 -> mock QA -> 승인 후 1컷 실생성으로 압축.
+2026-07-01 | 스타일 에셋 6종(`drop_cut`, `texture_crop`, `as_perm`, `shadow_perm_dandy`, `semi_leaf`, `semi_wolf`) `display.webp`/`reference.webp` 교체. 9/9 ready 확인. mock/preview 카드가 display 에셋을 쓰도록 코드 연결. build 통과.
+2026-07-01 | 완성 로드맵 작성. 1차 완성 기준은 상용 출시가 아니라 포트폴리오 제출 가능한 상담 MVP로 정의.
+2026-07-01 | 앱 기능 보강/자가 테스트: 9종 스타일 라이브러리 레퍼런스 선택 UI 연결, 손님 사진 없는 reference sample은 스타일 미리보기로 fallback, reference 품질 평가 UI 노출. AI 추천/레퍼런스 mock 흐름 모두 저장까지 통과.
+2026-07-01 | 자동 검증 마감: build/typecheck/style asset check 통과, smoke checklist 작성, 코드 폴더 non-git 및 `.env.*` ignore 상태 확인. 실제 유료 생성 0회 유지.
+2026-07-01 | 실제 생성 2회 테스트. synthetic 고객 + 시스루 댄디 기준 v1 얼굴 유지 3.5/5, 프롬프트 강화 후 v2 얼굴 유지 4/5. 테스트 후 mock/stub 재잠금.
+2026-07-01 | 비용 가드 UX 보강: AI 추천 3컷 자동 실제 생성 기본 OFF, 카드별 `이 카드 실제 생성`으로 1컷씩 실행. build/typecheck/assets 통과.
+2026-07-01 | CEO가 v2 실제 생성 결과를 같은 사람으로 보인다고 검수. 5장 테스트는 랜덤 인터넷 얼굴 대신 synthetic 얼굴 세트로 진행하기로 정리.
+2026-07-01 | synthetic 5장 실제 생성 테스트 완료. 최종 5/5 생성 성공, 얼굴 유지 4/5 이상 4장, 상담 사용성 3/5 이상 5장. `aspect_ratio=auto`, 세미리프 hair-crop reference 개선 반영.
+2026-07-01 | CEO 육안 검수: 5장 결과는 완전 동일인은 아니지만 얼추 비슷함. 상담용 MVP는 통과로 보되, "완벽한 얼굴 유지" 표현은 금지.
+2026-07-01 | 앱/README 문구를 "상담용 얼굴 인상 유지" 기준으로 조정. typecheck/build 통과.
+2026-07-01 | 긴 기장 reference 리스크 개선: leaf/semi_wolf reference를 hair 중심으로 교체하고 semi_wolf 실제 1컷 smoke test 통과. 테스트 후 mock 재잠금.
+2026-07-01 | mock 회귀 재검수 완료: 홈-동의-샘플-성향-자동추천-결과-저장-상세 통과. fallback 문구를 "실제 합성 전 스타일 미리보기"로 수정, build/typecheck/assets 통과.
+2026-07-02 | 디자인 리프레시 1차: 초딩 느낌 피드백 반영. 라운드/그림자/크림 장식/칩 과다를 줄이고 업무툴형 홈·결과·모드·기록 톤으로 정리. build/typecheck/assets와 mock 흐름 통과.
+2026-07-02 | CEO 육안 피드백: 1차 디자인은 너무 창백함. 다음 디자인 패스는 대비, 사진 존재감, 살롱 프리미엄 무드 보강으로 재설정.
+2026-07-02 | 앱 완성 로드맵 재작성. 포트폴리오 패키징 제외, 디자인 2차 -> 실제 업로드 QA -> 미용사 피드백 카피 -> 실제 생성 가드 -> 신뢰성 점검 순서로 정리.
+2026-07-02 | 중간저장: 현재 앱은 mock/stub 모드로 열려 있음. 다음 1수는 디자인 2차 패스, 이후 실제 파일 업로드 QA와 미용사 피드백 카피 반영.
+2026-07-02 | 외부 모델 도움으로 ROADMAP 상세판 갱신 확인. 상품성 기준에서 Phase 0(git/정본 정리) 우선으로 NEXT 순서 수정.
+2026-07-02 | 추천 안정화: 얼굴형 일치 점수 과가중을 낮추고 인접 얼굴형/안정 타이브레이크 적용. mock 동일 조건 반복 추천 동일 확인. VacAX hairfit self-junction 복구.
