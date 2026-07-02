@@ -23,3 +23,5 @@
 2026-07-02 | 사진 각도 보조 게이트 추가: 등록 사진을 MediaPipe landmark로 사전 확인해 안정/주의/재촬영을 표시하고 심한 각도는 진행 차단. typecheck/build 및 샘플 흐름 통과.
 2026-07-02 | CEO 제공 동일 인물 3장 각도 테스트: 정면 1장 ready, 틀어진 2장 blocked. 강제 진행 시 추천이 크게 흔들려 게이트 필요성 확인. readiness 9초 타임아웃 추가.
 2026-07-02 | Claude 기능 개선 위임 지시서 작성: 추천 로직, 얼굴분석 근거 문구, 각도 게이트 UX, 회귀 테스트, 레퍼런스 흐름 점검 범위와 금지사항 정리.
+2026-07-02 | Claude 기능 타당성 패스: hairDesign 기반 추천 스코어링(breakdown), 신뢰도별 안정 bias, 손님 문구 3카드 차별화, 사진 게이트 원인별 재촬영 안내, 레퍼런스 자동 과금 경로 제거 + 출처/권한 게이트, fixture 회귀 스크립트(check-recs) 추가. typecheck/build/assets/recs + mock 브라우저 흐름 통과, 유료 호출 0. 커밋 4건(codex/design-pass-2).
+2026-07-02 | Codex 검수에서 업로드 레퍼런스 출처 unknown 진행 허점 발견 후 차단. typecheck/build/assets/recs 통과, `9b5a1ac`까지 codex/design-pass-2 push 완료.

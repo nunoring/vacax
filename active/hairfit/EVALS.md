@@ -1,5 +1,28 @@
 # HairFit MVP EVALS
 
+## 2026-07-02 기능 패스 Codex 검수
+- Finding: Claude 패스 보고의 "출처 선택 + 권한 체크 전 진행 차단"과 달리, 업로드 레퍼런스가 `sourceType: unknown` 상태에서도 권한 체크만 하면 진행 가능했다.
+- Fix: `canUseReference`가 `hasImage && sourceType !== "unknown" && permissionChecked`를 요구하도록 수정하고, ReferenceUploadScreen에 sourceType 전달.
+- Verification: `npm.cmd run typecheck`, `npm.cmd run build`, `npm.cmd run hairfit:check-assets`, `npm.cmd run hairfit:check-recs` 통과.
+- Commit: `9b5a1ac fix: require reference source selection` pushed to `codex/design-pass-2`.
+- Pending: 실제 파일 업로드 화면에서 출처 선택 + 권한 체크박스 버튼 활성화 수동 검수 1회.
+
+## 2026-07-02 기능 타당성 패스 (Claude)
+- Scope: 추천 로직·상담 문구·사진 게이트·회귀 도구·레퍼런스 가드 (CLAUDE_FUNCTIONAL_BRIEF_2026-07-02).
+- Change: scoreStyle → scoreStyleBreakdown 항목 분해. hairDesign(앞머리/윗볼륨/옆볼륨) 설계값을 추천 점수에 직접 반영 — 근거 문구와 추천이 같은 설계 엔진 출처.
+- Change: 분석 신뢰도 낮을수록(mock ×4, estimated ×2) 안정 스타일 bias 강화.
+- Change: 손님 설명 문장을 기장별 상담 포인트로 차별화. 3카드 중간 문장 동일 반복 제거 (브라우저에서 3종 상이 확인).
+- Change: 사진 게이트 fail 원인(multi_face/face_small/yaw/tilt) 분리 + 원인별 재촬영 행동 안내 1줄. warning 버튼 문구 [일부 추정으로 진행].
+- Change: 결과 화면에 mock/estimated 신뢰도 안내 문구 노출 (사진 있는데 실측 실패한 경우).
+- Guard fix: 레퍼런스 이식이 real proxy 설정 시 분석 단계에서 confirm 없이 자동 유료 호출되던 경로 제거 — 미리보기 우선 + 카드별 [레퍼런스 실제 합성] confirm 버튼.
+- Guard fix: 업로드 레퍼런스는 출처 선택 + 사용 권한 체크 전 진행 차단. 라이브러리 스타일은 자동 통과.
+- New tool: `npm.cmd run hairfit:check-recs` — FaceAnalysis fixture 7종 회귀 체크 (deterministic/기장 3종/금지 표현/문구 중복/mock 안정화). PASS.
+- Verification: typecheck 통과, build 통과, check-assets 9/9 ready, check-recs PASS.
+- Browser mock flow: 홈 → 동의 → 샘플 → 성향 → 자동 추천 → 결과 → 근거 모달 → 선택 → 저장 → 상세 통과. 레퍼런스 모드 라이브러리 선택 → 결과 → mock 미리보기 통과. console error/warn 0.
+- Real generation: 실제 유료 호출 0회.
+- Commits: e965631, b3e6a32, 4ab7d1d, c601426 (branch codex/design-pass-2).
+- 미검증: 파일 업로드 경로(자동화 주입 불가 — 수동 필요), 업로드 레퍼런스 출처 UI 실화면, blocked/warning 실사진 게이트.
+
 ## 2026-07-01
 - Build: `npm.cmd run build` 통과.
 - Mock flow: 홈 -> 동의 -> 사진 -> 성향 -> 모드 -> 결과 확인.
