@@ -35,3 +35,4 @@
 2026-07-02 | 레퍼런스 카탈로그 선택 후 스타일 상세 패널 추가: 상담 한 줄, 기장, 앞머리/윗볼륨/옆볼륨/질감, 시술 태그, 핵심 근거 3줄 표시. typecheck/build/assets/recs 통과, `0838852` commit.
 2026-07-02 | 신규 남성 스타일 6종 에셋을 실제 생성 이미지로 교체: display는 모델컷, reference는 얼굴 영향 적은 머리 구조 레퍼런스. 레퍼런스 화면은 짧은/중간/긴 기장으로 분류, 홈의 `9개 기본 스타일 선택` 문구 제거. assets 15/15 ready, typecheck/build/recs 통과, real 호출 후 mock disarm, `cf5df88` push.
 2026-07-02 | 스타일 분류 조정: 드롭컷과 투블럭 댄디컷을 짧은 기장에서 중간 기장으로 이동. assets/recs/typecheck/build 통과, `37ef878` push.
+2026-07-02 | CEO 정면 사진으로 GPT Image 2 실제 1컷 테스트(시스루 댄디). `IS_MOCK=false`, 비용 $0.04, 생성 후 즉시 mock disarm. 얼굴 보존은 대체로 양호하나 피부/인상 정돈감 약간 있어 추가 프롬프트 조정 후보.
