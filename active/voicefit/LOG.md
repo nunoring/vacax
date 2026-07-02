@@ -214,4 +214,6 @@
 
 ## 마지막 갱신
 
-2026-07-01
+2026-07-02
+
+- 커머스 `not_used/curation` 감사 룰을 우회 체험담 표현까지 확장하고, `/publish` API에서도 감사 fail 발행을 422로 차단. Supabase 도메인은 NXDOMAIN 확인.

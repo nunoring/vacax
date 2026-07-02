@@ -42,6 +42,9 @@
 - 2026-07-02 외부 검수 반영: 현재 92%는 로컬 개발 루프 기준이며, 실발행/실사진/Supabase/쿠팡 API/수익 측정이 남아 운영 완성도는 약 60%로 재분류
 - `ROADMAP.md` 추가: Phase 0 안전 정리 → Phase 1 블로그 실사용 → Phase 2 수익/측정 → Phase 3 GO/KILL → Phase 4 쇼츠 조건부 확장
 - Phase 0 일부 완료: 코드 repo 보안 스캔 후 `815ec5e` 커밋/push 완료, `Documents\Codex\vacax` 구본은 백업 후 최신 `C:\Users\vacma\vacax`로 junction 연결
+- 커머스 정책 감사 강화: `not_used/curation`에서 개봉·언박싱·도착·착용·섭취처럼 사용 단어를 피한 체험담 표현도 fail로 잡음
+- 검수 UI뿐 아니라 `/api/posts/[id]/publish` 서버 라우트에서도 커머스 감사 fail이면 422로 발행 차단
+- Supabase DNS 재진단: `bviwpsptjwoogsjrsays.supabase.co`는 `Non-existent domain`으로 확인됨
 
 ## 활성 Blocker
 1. Supabase DNS 실패: `bviwpsptjwoogsjrsays.supabase.co` 이름 해석 실패 → DB 대신 로컬 fallback 사용 중
@@ -56,4 +59,4 @@
 - API 키가 대화/터미널 출력에 노출된 적 있음 → 실제 운영 전 키 회전 권장
 
 ## 마지막 갱신
-2026-07-02 (Phase 0 일부 완료: 코드 push + vacax junction)
+2026-07-02 (커머스 발행 게이트 강화 + Supabase NXDOMAIN 확인)
