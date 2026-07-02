@@ -26,3 +26,4 @@
 2026-07-02 | Claude 기능 타당성 패스: hairDesign 기반 추천 스코어링(breakdown), 신뢰도별 안정 bias, 손님 문구 3카드 차별화, 사진 게이트 원인별 재촬영 안내, 레퍼런스 자동 과금 경로 제거 + 출처/권한 게이트, fixture 회귀 스크립트(check-recs) 추가. typecheck/build/assets/recs + mock 브라우저 흐름 통과, 유료 호출 0. 커밋 4건(codex/design-pass-2).
 2026-07-02 | Codex 검수에서 업로드 레퍼런스 출처 unknown 진행 허점 발견 후 차단. typecheck/build/assets/recs 통과, `9b5a1ac`까지 codex/design-pass-2 push 완료.
 2026-07-02 | CEO 정면 사진 + 시스루 댄디컷 실제 생성 1컷 시도. gpt-once로 1회 제한 후 실행했으나 Replicate output 이미지 없음으로 fallback placeholder 반환(`isMock=true`, `costUsd=0`). 즉시 mock 재잠금.
+2026-07-02 | 실제 생성 실패 후 Replicate output 객체/배열 파싱과 실패 status/error 메시지 보강. `node --check`/build 통과, `12b124b` push. mock 재시작 완료.

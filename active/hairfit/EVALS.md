@@ -6,7 +6,8 @@
 - Guard: `gpt-once`로 MAX 1회만 arm, 테스트 직후 `hairfit:mock`으로 재잠금 (`realEnabled=false`).
 - Result: proxy 응답 200이었으나 실제 생성 이미지는 오지 않음. fallback placeholder 반환.
 - Response: `provider=fallback`, `isMock=true`, `costUsd=0`, note=`Replicate 응답에 output 이미지가 없습니다.`
-- Evaluation: 얼굴 유지/헤어 자연스러움 품질 평가는 불가. 다음 실제 호출 전 Replicate output schema/status 로그 보강 필요.
+- Evaluation: 얼굴 유지/헤어 자연스러움 품질 평가는 불가.
+- Follow-up: 다음 실제 호출 전 안전하게 원인을 보려고 Replicate file-like output 파싱과 status/error 메시지를 보강 (`12b124b`).
 
 ## 2026-07-02 기능 패스 Codex 검수
 - Finding: Claude 패스 보고의 "출처 선택 + 권한 체크 전 진행 차단"과 달리, 업로드 레퍼런스가 `sourceType: unknown` 상태에서도 권한 체크만 하면 진행 가능했다.
