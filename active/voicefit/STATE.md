@@ -49,7 +49,7 @@
 - Supabase DNS 장애 때 대시보드가 로딩에 묶이지 않도록 `/api/posts`, `/api/voice-profiles`에서 DNS preflight 후 로컬 fallback 즉시 반환
 
 ## 활성 Blocker
-1. Supabase DNS 실패: `bviwpsptjwoogsjrsays.supabase.co` 이름 해석 실패 → DB 대신 로컬 fallback 사용 중
+1. ~~Supabase DNS 실패~~ → 2026-07-02 저녁 복구 확인 (검증 글이 실제 DB에 저장/삭제됨). 로컬 fallback 데이터 → DB 마이그레이션 재검증 필요
 2. 쿠팡 파트너스 API 키 없음 → 상품명/가격/이미지 완전 자동 수집 불가
 3. 네이버 자동 발행은 운영용 검증 미완
 4. 방문 후기 사진 업로드/배치 흐름은 실제 사진 묶음으로 Claude Vision 호출까지 추가 검증 필요

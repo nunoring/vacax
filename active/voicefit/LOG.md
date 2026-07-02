@@ -1,5 +1,10 @@
 # VoiceFit 작업 로그
 
+## 2026-07-02
+
+- 기능 검수 반영: 미채점 발행 차단, 네이버/쿠팡 링크 채널 가드, product 사용여부 감사, 이미지 슬롯 변형 처리, AI 상투문장 금지 추가. 검증: `test:commerce` 30/0, `test:publish` 18/0, `test:image` 9/0, `test:voice` 6/0, `lint`, `build`.
+- 발견: Supabase 접속 복구 확인. 로컬 fallback 데이터 → DB 마이그레이션 재검증 필요.
+
 ## 2026-07-01 (커머스 패키지 MVP 인수인계)
 
 - ✅ 네이버 블로그 URL 3개 크롤링/말투 분석 흐름 확인
