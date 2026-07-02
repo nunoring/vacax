@@ -1,10 +1,11 @@
 # VoiceFit 다음 액션
 
 ## 즉시 할 일
-1. 키 회전: 대화/터미널 출력에 노출 이력 있는 API 키를 운영 전 재발급하고 `.env.local` 교체
-2. Supabase 대시보드에서 프로젝트 pause/삭제/URL 변경 여부 확인. 현재 도메인은 DNS `Non-existent domain`
-3. 방문 후기 사진 3~5장 업로드 → Claude Vision 분석 → 본문 배치 → 검수 HTML 이미지 표시까지 실제 흐름 검증
-4. 방문 후기 90점대 실험: 실제 방문 후기 원문 3개 이상 추가 수집 후 같은 장르 few-shot 재검증. 90점 실패 시 85점 게이트로 출하
+1. 상품글 72점 고착 해결: product/commerce_pack 블로그 본문에 2-pass 말투 변환을 확장하고, 변환 패스에서 `CURATION_COPY`/`HOOK_RULES` 재주입을 제거
+2. 키 회전: 대화/터미널 출력에 노출 이력 있는 API 키를 운영 전 재발급하고 `.env.local` 교체
+3. Supabase 대시보드에서 프로젝트 pause/삭제/URL 변경 여부 확인. 현재 도메인은 DNS `Non-existent domain`
+4. 방문 후기 사진 3~5장 업로드 → Claude Vision 분석 → 본문 배치 → 검수 HTML 이미지 표시까지 실제 흐름 검증
+5. 방문 후기 90점대 실험: 실제 방문 후기 원문 3개 이상 추가 수집 후 같은 장르 few-shot 재검증. 90점 실패 시 85점 게이트로 출하
 
 ## 이후
 - 로컬 이미지 fallback 데이터를 Supabase 복구 후 DB/Storage 흐름과 재검증
