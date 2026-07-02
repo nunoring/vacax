@@ -112,3 +112,15 @@
 - Browser console: error/warn 없음.
 - Verification: `npm.cmd run typecheck`, `npm.cmd run hairfit:check-assets`, `npm.cmd run build` 통과.
 - Guard: proxy health `realEnabled=false`, Vite 200 확인.
+
+## 2026-07-02 얼굴 각도 보조 게이트 3장 테스트
+- Input: CEO 제공 동일 인물 사진 3장(정면, 틀어진 컷 2장). 테스트용 복사본은 public 임시 폴더에만 두고 테스트 후 삭제.
+- Real generation: 실제 이미지 생성 호출 0회.
+- Test path: 브라우저에서 앱과 같은 `checkPhotoReadiness -> analyzeFace -> recommendStyles` 순서 실행.
+- Result 1: `ready`, yawProxy 0.883, tilt -1.84도, confidence `measured`. 추천: 드롭컷 / 시스루 댄디컷 / 세미울프컷.
+- Result 2: `blocked`, yawProxy 0.044, tilt -8.87도. 모델 기준 측면급으로 판단. 강제 분석 시 mock 폴백으로 추천이 바뀜.
+- Result 3: `blocked`, yawProxy 0.420, tilt -6.91도. fail 경계 아래라 재촬영 권장. 강제 분석 시 mock 폴백으로 추천이 바뀜.
+- Finding: 게이트가 필요한 이유 확인. 틀어진 사진을 강제로 진행하면 얼굴형/추천이 크게 흔들림.
+- Fix: MediaPipe 로드 지연 시 사진 단계가 무한 `확인 중`에 묶이지 않도록 `checkPhotoReadiness`에 9초 타임아웃 추가.
+- Verification: `npm.cmd run typecheck`, `npm.cmd run build` 통과.
+- Guard: 테스트용 이미지/HTML 삭제 완료. 얼굴 사진 repo commit 없음.
