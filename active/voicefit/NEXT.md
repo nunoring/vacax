@@ -10,7 +10,7 @@
 - 로컬 이미지 fallback 데이터를 Supabase 복구 후 DB/Storage 흐름과 재검증
 - 쇼츠 MP4는 `NEXT_PUBLIC_SHORTS_RENDER_ENABLED=1`일 때만 노출. 기본은 개발중으로 잠금
 - YouTube Shorts 자동화 후보 정리: MP4 생성 → 비공개 업로드 → 사람 공개
-- 쿠팡 파트너스 API 키 발급 후 상품명/가격/이미지 자동 수집 연결
+- 쿠팡 파트너스 API는 최종 승인 후 재시도. 그 전까지 `partners.coupang.com/#affiliate/ws/link`에서 만든 상품 링크 수동 붙여넣기 흐름을 우선 검증
 - Supabase DNS 복구 후 로컬 fallback 데이터와 DB 저장 흐름 재검증
 - 네이버/티스토리/릴스/쇼츠 채널별 복사·발행 운영 플로우 정리
 
