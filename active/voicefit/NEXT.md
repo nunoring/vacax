@@ -1,7 +1,7 @@
 # VoiceFit 다음 액션
 
 ## 즉시 할 일
-1. 상품글 72점 고착 해결: product/commerce_pack 블로그 본문에 2-pass 말투 변환을 확장하고, 변환 패스에서 `CURATION_COPY`/`HOOK_RULES` 재주입을 제거
+1. 상품글 85점대 개선: `이상입니다` 같은 어색한 서명 삽입과 정보문 리듬 반복을 줄이고, 상품글 말투 샘플/금지표현 테스트 추가
 2. 키 회전: 대화/터미널 출력에 노출 이력 있는 API 키를 운영 전 재발급하고 `.env.local` 교체
 3. Supabase 대시보드에서 프로젝트 pause/삭제/URL 변경 여부 확인. 현재 도메인은 DNS `Non-existent domain`
 4. 방문 후기 사진 3~5장 업로드 → Claude Vision 분석 → 본문 배치 → 검수 HTML 이미지 표시까지 실제 흐름 검증
